@@ -52,13 +52,13 @@
 1. 从`git`拉取工程：
 
    ```shell
-   
+   git clone git@github.com:ch1ies/lottery_game.git
    ```
 
 2. 安装依赖：
 
    ```shell
-   cd Lottery2
+   cd lottery_game
    npm install | yarn install
    ```
 
