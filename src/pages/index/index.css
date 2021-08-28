@@ -1,0 +1,126 @@
+/* 首页的css */
+/* .main-container{
+  text-align: center;
+  font-size: 2em;
+} */
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd { 
+  margin: 0px; 
+  padding: 0px; 
+  font-size: 12px; 
+  font-weight: normal; }
+ul { list-style: none; }
+img { border-style: none; }
+
+.lottery {
+  width: 486px;
+  height: 396px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: antiquewhite;
+}
+
+.turntable-box {
+  background: #fadd95;
+  box-shadow: inset 0 0 16px #ff9a2e;
+  border-radius: 12px;
+  box-sizing: border-box;
+  position: relative;
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+}
+.turntable-box .upper-border{
+  top: 0;
+}
+.turntable-box .up-down {
+  position: absolute;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: calc(100% - 16px);
+  justify-content: space-between;
+}
+.turntable-box .left-border {
+  left: 0;
+}
+.turntable-box .left-right {
+  position: absolute;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: calc(100% - 16px);
+  justify-content: space-between;
+  flex-direction: column;
+}
+.turntable-box .right-border {
+  right: 0;
+}
+
+.turntable-box .blocks {
+    width: 100%;
+    height: 100%;
+}
+
+.turntable-box .blocks .item-container {
+    width: 100%;
+    height: 100%;
+    background: #e37815;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.turntable-box .blocks .item-container .item {
+    width: calc(33.33333% - 5.33333px);
+    height: calc(33.33333% - 5.33333px);
+}
+.turntable-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fdf3f3;
+  border-radius: 4px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.turntable-item .image {
+    height: 50px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.turntable-item .image img {
+  max-width: 40px;
+  max-height: 40px;
+  height: 100%;
+}
+
+.turntable-item .text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #d25f00;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 点击开始背景色 */
+.lotteryBg {
+  background: #eee;
+  box-shadow: inset 0 0 16px #ffa800;
+  cursor: pointer;
+}

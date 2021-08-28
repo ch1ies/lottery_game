@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   <!-- 引入公共页头 -->
+   <%= require("html-loader!../common/header/index.html") %>
+    <div class="lottery" id="lottery">
+      <div class="turntable-box">
+        <div class="upper-border up-down"></div>
+        <div class="lower-border up-down"></div>
+        <div class="left-border left-right"></div>
+        <div class="right-border up-down"></div>
+        <div class="blocks" id="app"></div>
+      </div>
+      <div id="toast"></div>
+   </div>
+   <!-- 引入公共页尾 -->
+   <%= require("html-loader!../common/footer/index.html") %>
+   <script src="./index.js"></script>
+  </body>
+</html>
