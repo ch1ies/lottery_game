@@ -22,6 +22,14 @@ const columns = [
     dataIndex: 'url',
     key: 'url',
     align: 'center',
+    render: (url) => {
+      return (
+        <div>
+          <span>{url}</span>
+          <img className="img" src={url}/>
+        </div>
+      )
+    }
   },
   {
     title: '中奖概率',
@@ -30,34 +38,7 @@ const columns = [
     width: 100,
     align: 'center',
   },
-];
-
-// const data = [
-//   {
-//     id: '1',
-//     key: '1',
-//     name: 'John Brown',
-//     rate: 32,
-//     url: 'New York No. 1 Lake Park',
-//     tags: ['nice', 'developer'],
-//   },
-//   {
-//     id: '2',
-//     key: '2',
-//     name: 'Jim Green',
-//     rate: 42,
-//     url: 'London No. 1 Lake Park',
-//     tags: ['loser'],
-//   },
-//   {
-//     id: '3',
-//     key: '3',
-//     name: 'Joe Black',
-//     rate: 32,
-//     url: 'Sidney No. 1 Lake Park',
-//     tags: ['cool', 'teacher'],
-//   },
-// ];
+]
 
 const table = (props) => {
   // 是否有修改，有修改就请求新数据

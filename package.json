@@ -46,7 +46,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.6.3",
+    "@ant-design/icons": "^4.6.4",
     "antd": "^4.16.13",
     "axios": "^0.21.1",
     "express": "^4.17.1",

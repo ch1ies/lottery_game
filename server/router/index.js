@@ -1,5 +1,5 @@
 const express = require('express')
-const {getAllData, updaeData, computerPrizeRate} = require('../service/index')
+const {getAllData, updaeData, computerPrizeRate, findPrizedItem} = require('../service/index')
 const router = express.Router()
 router.get('/all', async (req, res) => {
   const list = await getAllData()
@@ -9,6 +9,11 @@ router.get('/all', async (req, res) => {
 router.post('/update', async (req, res) => {
   const data = req.body
   const list = await updaeData(data)
+  res.send(list)
+})
+router.get('/id', async (req, res) => {
+  const data = req.query
+  const list = await findPrizedItem(data)
   res.send(list)
 })
 

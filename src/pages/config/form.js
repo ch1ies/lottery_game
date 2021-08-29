@@ -1,29 +1,38 @@
-import React, {useState} from "react";
-import { Form, Input, Button, message} from 'antd';
+import React, {useState} from "react"
+import { Form, Input, Button, message} from 'antd'
 import { updaeData } from "../../api/index"
 const form = (props) => {
   const {callback} = props
-  const formRef = React.createRef();
+  const formRef = React.createRef()
   // const [visible, setVisible] = useState(false)
   const info = () => {
     message.success('更新成功')
   }
 
   const onFinish = (values) => {
+    if (+values.id === 4) {
+      message.error('图片id不能为4')
+      return 
+    }
+    if (+values.id < -1 || +values.id > 8) {
+      message.error('更新失败，id 越界')
+      return 
+    }
+    values.id = Number(values.id)
     updaeData(values).then(res => {
       console.log(values, 'values')
-      formRef.current.resetFields();
+      formRef.current.resetFields()
       info()
       callback && callback(res)
     })
 
   };
   const onreset = () => {
-    formRef.current.resetFields();
+    formRef.current.resetFields()
   }
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+    console.log('Failed:', errorInfo)
+  }
 
   return (
   <div>
@@ -52,7 +61,7 @@ const form = (props) => {
           },
         ]}
       >
-        <Input placeholder='请输入图片id' />
+        <Input allowClear placeholder='请输入图片id' />
       </Form.Item>
       <Form.Item
         label="图片路径"
@@ -64,7 +73,7 @@ const form = (props) => {
           },
         ]}
       >
-        <Input placeholder='请输入图片路径' />
+        <Input allowClear placeholder='请输入图片路径' />
       </Form.Item>
       <Form.Item
         label="图片名称"
@@ -76,7 +85,7 @@ const form = (props) => {
           },
         ]}
       >
-         <Input placeholder='请输入图片名称' />
+         <Input allowClear placeholder='请输入图片名称' />
       </Form.Item>
       <Form.Item
         label="中奖概率"
@@ -88,7 +97,7 @@ const form = (props) => {
           },
         ]}
       >
-         <Input  placeholder='请输入中奖概率' />
+         <Input allowClear placeholder='请输入中奖概率' />
       </Form.Item>
       <Form.Item
         label="指定中奖id"
@@ -99,7 +108,7 @@ const form = (props) => {
           },
         ]}
       >
-         <Input  placeholder='请输入中奖概率' />
+         <Input allowClear placeholder='请输入中奖概率' />
       </Form.Item>
       <Form.Item
         wrapperCol={{

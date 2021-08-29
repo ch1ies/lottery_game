@@ -93,7 +93,8 @@ class Lottery {
 
     // 转到最后一圈，把奖品总数组的最后一项设置为中奖id 对应的项
     if (index === rotateCircles) {
-      let index = ArrRotateOrder.indexOf(this.prize_id)
+      console.log(this.prize_id, 'prize_id')
+      let index = ArrRotateOrder.indexOf(+this.prize_id)
       console.log(index, 'index')
       // 如 prize_id = 7 则最后一圈的尾项应该是7 即：ArrRotateOrder = [0,3,6,7]
       ArrRotateOrder.splice(index + 1) // 

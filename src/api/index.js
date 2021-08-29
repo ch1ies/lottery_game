@@ -15,3 +15,9 @@ export const computerPrizeRate = (req) => {
 export const updaeData = (req) => {
   return jsonApi.post('/update', JSON.stringify(req))
 }
+
+export const findPrizedItem = (req) => {
+  return api.get('/id', {
+    params: req
+  })
+}
