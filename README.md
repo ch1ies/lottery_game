@@ -1,6 +1,6 @@
-# 使用webpack + express 搭建的多页应用程序
-- webpack
-- express
+# 可配置的抽奖小游戏
+# 技术栈
+- webpack + express 搭建的多页应用程序
 - React
 - antd
 
@@ -66,7 +66,7 @@
 
    ```shell
    前端页面运行： npm run dev | yarn run dev  // 端口8080
-   后端页面也行： npm run server | yarn run server // 端口8082
+   后端页面运行： npm run server | yarn run server // 端口8082
    同时运行： npm start | yarn start
    ```
 
