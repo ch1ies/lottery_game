@@ -1,3 +1,4 @@
+// 滚动窗口类
 class Scroll {
   constructor(id, data) {
     this.container = document.getElementById(id)
