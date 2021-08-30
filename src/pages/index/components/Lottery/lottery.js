@@ -1,9 +1,10 @@
+// 大转盘
 class Lottery {
   constructor(id, opt, observer,lotteryClick) {
     this.container = document.getElementById(id);
     this.items = null // 所有子元素
     this.options = opt || []; // 配置选项
-    this.container.innerHTML = this.render(opt)
+    this.container.innerHTML = this.render(opt) // 初始化dom 
     this.isTurnOver = true // 转圈是否完成的状态
     this.lotteryClick = lotteryClick //后端返回计算后中奖id 的方法 
     this.canToast = false  // 是否抽奖完成，提示中奖信息

@@ -1,6 +1,6 @@
 import { Table, Tag, Space } from 'antd';
 import React, {useEffect, useState} from 'react';
-import { getAllData } from '../../api/index'
+import { getAllData } from '../../../api/index'
  
 const columns = [
   {

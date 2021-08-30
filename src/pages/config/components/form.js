@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { Form, Input, Button, message} from 'antd'
-import { updaeData } from "../../api/index"
+import { updaeData } from "../../../api/index"
 const form = (props) => {
   const {callback} = props
   const formRef = React.createRef()

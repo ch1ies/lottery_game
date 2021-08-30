@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import { Divider } from 'antd';
-import From from "./form"
-import Table from "./table"
-import Content from './content'
+import From from "./components/form"
+import Table from "./components/table"
+import Content from './components/content'
  const App = () => {
  const [loader, setLoader] = useState(false)
  const callback = () => {

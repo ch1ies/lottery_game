@@ -12,16 +12,16 @@ ul { list-style: none; }
 img { border-style: none; }
 
 .lottery {
-  width: 486px;
-  height: 396px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 30px;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 .turntable-box {
-  background: #fadd95;
-  box-shadow: inset 0 0 16px #ff9a2e;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   border-radius: 12px;
   box-sizing: border-box;
   position: relative;
@@ -29,46 +29,18 @@ img { border-style: none; }
   width: 100%;
   height: 100%;
 }
-.turntable-box .upper-border{
-  top: 0;
-}
-.turntable-box .up-down {
-  position: absolute;
-  left: 8px;
-  display: flex;
-  align-items: center;
-  height: 24px;
-  width: calc(100% - 16px);
-  justify-content: space-between;
-}
-.turntable-box .left-border {
-  left: 0;
-}
-.turntable-box .left-right {
-  position: absolute;
-  top: 8px;
-  display: flex;
-  align-items: center;
-  width: 24px;
-  height: calc(100% - 16px);
-  justify-content: space-between;
-  flex-direction: column;
-}
-.turntable-box .right-border {
-  right: 0;
-}
-
-.turntable-box .blocks {
-    width: 100%;
-    height: 100%;
-}
+/* .turntable-box .bg {
+  background: #fadd95;
+  box-shadow: inset 0 0 16px #ff9a2e;
+} */
 
 .turntable-box .blocks .item-container {
-    width: 100%;
-    height: 100%;
+    width: 486px;
+    height: 396px;
     background: #e37815;
     border-radius: 8px;
     padding: 16px;
+    margin-left:230px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -127,3 +99,23 @@ img { border-style: none; }
 .img {
   width: 30px;
 }
+/* taast */
+#toast {
+  width: 900px;
+  height: 396px;
+  margin-top:30px;
+}
+
+/* Scroll styles */
+#review_box {
+  width: 300px;
+  height: 200px; /* 必须 */
+  overflow: hidden;/* 必须 */
+  margin: 10px auto;
+  text-align: center;
+  box-shadow: inset 0 0 16px #ffdbdb;
+  background-color: #eee;
+ }
+#review_box > ul {
+  list-style: none;
+ }

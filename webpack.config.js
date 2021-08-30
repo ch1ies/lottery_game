@@ -79,15 +79,6 @@ module.exports = {
         },
         exclude: /(node_modules|bower_components)/, // 千万别忘记添加exclude选项,不然运行可能会报错
       }
-      // { test: /\.js$/, 
-      //   use: {
-      //     loader: "babel-loader"
-      //   },
-      //   options: {
-      //     preset: ['babel/preset-env']
-      //   },
-      //   exclude: /(node_modules|bower_components)/
-      // },
     ],
   },
   plugins: [
